@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
+Sgye
 """
 
 from pathlib import Path
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-2)g9e0vq%yy6cre6t&w+s9h%^&zg1su$#973vy7hi+o!)!-423
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['165.22.113.110']
 
 
 # Application definition
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'therelay'
 ]
 
 MIDDLEWARE = [

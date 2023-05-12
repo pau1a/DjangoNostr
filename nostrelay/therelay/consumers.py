@@ -6,18 +6,17 @@ class MyConsumer(AsyncWebsocketConsumer):
 
     async def connect(self):
         print("hiho1")
-        #self.websocket = await websockets.connect('ws://165.22.113.110:13167/ws/my-websocket/')
+        await self.accept()
 
-    async def receive(self):
-        print("hiho2")
-        message = await self.websocket.recv()
-        return json.loads(message)
-
-    async def send(self, data):
-        print("hiho3")
-        message = json.dumps(data)
-        await self.websocket.send(message)
-
-    async def disconnect(self):
+    async def disconnect(self, fled):
         print("hiho4")
-        await self.websocket.close()
+        pass
+
+    async def receive(self, text_data):
+        print("hiho2")
+        text_data_json = json.loads(text_data)
+        message = text_data_json[1]
+
+        await self.send(text_data=json.dumps({
+            'message': message
+        }))

@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/ jojo
 """
 
+import logging
+#import logging.config
 from pathlib import Path
+#logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+#logging.basicConfig(filename='test.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +31,35 @@ SECRET_KEY = 'django-insecure-2)g9e0vq%yy6cre6t&w+s9h%^&zg1su$#973vy7hi+o!)!-423
 DEBUG = True
 
 ALLOWED_HOSTS = ['165.22.113.110']
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': './flabadab.log',
+        },
+    },
+    'loggers': {
+        'nostrelay': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
+
+logging.config.dictConfig(LOGGING)
+#print(logging.Logger.manager.loggerDict)
+#logging.info('Test log message settings!!!')
+logger.debug('This is a debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning message')
+logger.error('This is an error message')
+logger.critical('This is a critical message')
 
 
 # Application definition
@@ -51,6 +85,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+#MIDDLEWARE = []
 
 ROOT_URLCONF = 'nostrelay.urls'
 

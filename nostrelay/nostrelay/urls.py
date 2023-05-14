@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from therelay.views import list_open_websockets
 
 urlpatterns = [
+    path('list-open-websockets/', list_open_websockets, name='list_open_websockets'),
     path('admin/', admin.site.urls),
 ]

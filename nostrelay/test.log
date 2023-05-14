@@ -1,0 +1,27 @@
+2023-05-13 09:33:56,311 DEBUG This is a debug message
+2023-05-13 09:33:56,311 INFO This is an info message
+2023-05-13 09:33:56,311 WARNING This is a warning message
+2023-05-13 09:33:56,311 ERROR This is an error message
+2023-05-13 09:33:56,311 CRITICAL This is a critical message
+2023-05-13 09:34:05,906 WARNING Not Found: /static/admin/css/fonts.css
+2023-05-13 09:54:41,389 DEBUG This is a debug message
+2023-05-13 09:54:41,389 INFO This is an info message
+2023-05-13 09:54:41,389 WARNING This is a warning message
+2023-05-13 09:54:41,389 ERROR This is an error message
+2023-05-13 09:54:41,389 CRITICAL This is a critical message
+2023-05-13 09:58:31,226 DEBUG This is a debug message
+2023-05-13 09:58:31,226 INFO This is an info message
+2023-05-13 09:58:31,226 WARNING This is a warning message
+2023-05-13 09:58:31,226 ERROR This is an error message
+2023-05-13 09:58:31,227 CRITICAL This is a critical message
+2023-05-13 10:49:00,100 DEBUG This is a debug message
+2023-05-13 10:49:00,101 INFO This is an info message
+2023-05-13 10:49:00,101 WARNING This is a warning message
+2023-05-13 10:49:00,101 ERROR This is an error message
+2023-05-13 10:49:00,101 CRITICAL This is a critical message
+2023-05-13 10:49:53,565 WARNING Not Found: /static/admin/css/fonts.css
+2023-05-13 11:49:45,870 DEBUG This is a debug message
+2023-05-13 11:49:45,871 INFO This is an info message
+2023-05-13 11:49:45,871 WARNING This is a warning message
+2023-05-13 11:49:45,871 ERROR This is an error message
+2023-05-13 11:49:45,871 CRITICAL This is a critical message

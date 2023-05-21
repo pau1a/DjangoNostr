@@ -1,23 +1,23 @@
 from channels.generic.websocket import AsyncWebsocketConsumer
 from channels.exceptions import DenyConnection
+from .parsers import parse_message
 import json, asyncio, websockets
 
 class MyConsumer(AsyncWebsocketConsumer):
 
     async def connect(self):
-        print("hiho1")
+        print("Connected to websocket")
         await self.accept()
 
     async def disconnect(self, fled):
-        print("hiho4")
         pass
 
     async def receive(self, text_data):
-        print("hiho2")
         text_data_json = json.loads(text_data)
-        packet_type = text_data_json[0]
-        print(text_data_json)
+        message_type, *rest = text_data_json
+        await parse_message(message_type, rest)
 
-        # await self.send(text_data=json.dumps({
-        #     'message': "thanks" 
-        # }))
+        await self.send(text_data=json.dumps({
+            'data': list(["NOTICE", "Under test"]),
+            'other_key': "other_value"
+        }))

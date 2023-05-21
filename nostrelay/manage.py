@@ -6,6 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    print("DOOP")
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nostrelay.settings')
     try:
         from django.core.management import execute_from_command_line

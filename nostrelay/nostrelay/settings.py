@@ -10,16 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/ jojo
 """
 
-import logging
+import logging, os
 #import logging.config
 from pathlib import Path
 #logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
-#logging.basicConfig(filename='test.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s')
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -30,7 +26,7 @@ SECRET_KEY = 'django-insecure-2)g9e0vq%yy6cre6t&w+s9h%^&zg1su$#973vy7hi+o!)!-423
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['165.22.113.110']
+ALLOWED_HOSTS = ['165.22.113.110','nostr.technofatty.com']
 
 LOGGING = {
     'version': 1,
@@ -52,15 +48,8 @@ LOGGING = {
     },
 }
 
-logging.config.dictConfig(LOGGING)
-#print(logging.Logger.manager.loggerDict)
-#logging.info('Test log message settings!!!')
-logger.debug('This is a debug message')
-logger.info('This is an info message')
-logger.warning('This is a warning message')
-logger.error('This is an error message')
-logger.critical('This is a critical message')
-
+#logging.config.dictConfig(LOGGING)
+logger.debug('Django settings read')
 
 # Application definition
 
@@ -106,7 +95,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'nostrelay.wsgi.application'
-ASGI_APPLICATION = 'nostrelay.routing.application'
+ASGI_APPLICATION = 'nostrelay.asgi.application'
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels.layers.InMemoryChannelLayer"
@@ -158,7 +147,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+print(BASE_DIR)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

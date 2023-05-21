@@ -1,6 +1,6 @@
 # Djangstr
 
-# Nostr Relay Django Project
+# A Django Nostr Relay
 
 This is a Django project that has been modified to accept WebSocket connections and acts as a Nostr relay. The Nostr relay allows real-time communication between clients and servers using the WebSocket protocol.
 

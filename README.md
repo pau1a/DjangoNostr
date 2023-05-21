@@ -16,13 +16,13 @@ This is a Django project that has been modified to accept WebSocket connections 
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/nostr-relay-django-project.git
+git clone https://github.com/pau1a/Djangstr.git
 ```
 
 2. Change to the project directory:
 
 ```
-cd nostr-relay-django-project
+cd Djangstr
 ```
 
 3. Create and activate a virtual environment:

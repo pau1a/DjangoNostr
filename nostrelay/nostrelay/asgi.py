@@ -7,7 +7,8 @@ For more information on this file, see
 https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 """
 
-import os, logging, ssl, logging.config
+import os, subprocess, logging, ssl, logging.config
+subprocess.run(['export', 'DJANGO_SETTINGS_MODULE=nostrelay.settings'], shell=True)
 from django.conf import settings
 from django.core.asgi import get_asgi_application
 from channels.routing import ProtocolTypeRouter, URLRouter
@@ -20,7 +21,7 @@ import django
 django.setup()
 from therelay import routing
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nostrelay.settings')
+#os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nostrelay.settings')
 
 
 #settings.configure()

@@ -1,15 +1,14 @@
 from django.db import models
 
-# class User(models.Model):
-#     pubkey = models.CharField(max_length=64)
-# 	# "pubkey": <32-bytes lowercase hex-encoded public key of the event creator>,
+class User(models.Model):
+    pubkey = models.CharField(max_length=64)
+    	# "pubkey": <32-bytes lowercase hex-encoded public key of the event creator>,
 
 class Message(models.Model):
-
     type = models.CharField(max_length=16)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    #sender = models.ForeignKey('User', on_delete=models.CASCADE)
+    sender = models.ForeignKey('therelay.User', on_delete=models.CASCADE, blank=True, null=True)
     
     class Meta:
         abstract = True  # Make Message an abstract base class

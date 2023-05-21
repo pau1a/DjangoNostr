@@ -1,5 +1,5 @@
 from datetime import datetime
-from .models import Event
+from therelay.models import Event
 from asgiref.sync import sync_to_async
 
 # Wrap the synchronous database operation in sync_to_async

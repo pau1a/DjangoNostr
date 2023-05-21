@@ -28,25 +28,25 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['165.22.113.110','nostr.technofatty.com']
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': './flabadab.log',
-        },
-    },
-    'loggers': {
-        'nostrelay': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#         'file': {
+#             'class': 'logging.FileHandler',
+#             'filename': './flabadab.log',
+#         },
+#     },
+#     'loggers': {
+#         'nostrelay': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#         },
+#     },
+# }
 
 #logging.config.dictConfig(LOGGING)
 logger.debug('Django settings read')

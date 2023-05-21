@@ -104,4 +104,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions or suggestions, feel free to reach out to the project maintainer at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or suggestions, feel free to reach out to the project maintainer at [p a u l a @paulalivingstone.com](mailto:p a u l a @paulalivingstone.com).

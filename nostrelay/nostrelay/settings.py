@@ -16,6 +16,7 @@ from pathlib import Path
 #logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 BASE_DIR = Path(__file__).resolve().parent.parent
+#logger.debug('Django settings read')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -27,29 +28,6 @@ SECRET_KEY = 'django-insecure-2)g9e0vq%yy6cre6t&w+s9h%^&zg1su$#973vy7hi+o!)!-423
 DEBUG = True
 
 ALLOWED_HOSTS = ['165.22.113.110','nostr.technofatty.com']
-
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#         },
-#         'file': {
-#             'class': 'logging.FileHandler',
-#             'filename': './flabadab.log',
-#         },
-#     },
-#     'loggers': {
-#         'nostrelay': {
-#             'handlers': ['console'],
-#             'level': 'DEBUG',
-#         },
-#     },
-# }
-
-#logging.config.dictConfig(LOGGING)
-logger.debug('Django settings read')
 
 # Application definition
 
@@ -74,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-#MIDDLEWARE = []
 
 ROOT_URLCONF = 'nostrelay.urls'
 
@@ -149,7 +126,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-print(BASE_DIR)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
